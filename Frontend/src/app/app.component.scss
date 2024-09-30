@@ -1,0 +1,12 @@
+:host {
+    display: grid;
+    grid-template-columns: 10vw 160px 40px auto 10vw;
+    grid-template-rows: 100px calc(100vh - 200px) 100px;
+    grid-template-areas: 
+        ". header header header ."
+        ". leftSidebar leftSidebar main ."
+        ". footer footer footer .";
+}
+.main {
+    grid-area: main;
+}
