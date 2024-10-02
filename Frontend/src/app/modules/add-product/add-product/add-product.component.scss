@@ -1,0 +1,38 @@
+:host {
+  --form-width: 350px;
+}
+
+form {
+    height: 100%;
+}
+.form-container {
+    display: flex;
+    flex-flow: column;
+    align-items:center;
+    justify-content: center;
+    height: 100%;
+}
+.form-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: var(--form-width);
+}
+.mat-mdc-form-field {
+    width: var(--form-width) !important;
+}
+.example-container mat-form-field + mat-form-field {
+    margin-left: 8px;
+  }
+  
+  .example-right-align {
+    text-align: right;
+  }
+  
+  input.example-right-align::-webkit-outer-spin-button,
+  input.example-right-align::-webkit-inner-spin-button {
+    display: none;
+  }
+  
+  input.example-right-align {
+    -moz-appearance: textfield;
+  }

@@ -1,1 +1,24 @@
-<p>add-product works!</p>
+<form [formGroup]="form" #productFormEl="ngForm">
+    <div class="form-container">
+        <mat-form-field>
+            <mat-label>Code</mat-label>
+            <input #productCodeInput formControlName="code" matInput placeholder="Code" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name" required>
+        </mat-form-field>
+        <mat-form-field floatLabel="always">
+            <mat-label>Price</mat-label>
+            <input formControlName="price" matInput class="example-right-align" type="number" placeholder="0" required>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Description</mat-label>
+            <textarea formControlName="description" matInput placeholder="Description"></textarea>
+        </mat-form-field>
+        <div class="form-button-container">
+            <button mat-raised-button type="reset">Clear</button>
+            <button mat-flat-button type="submit" (click)="submitProductForm()">Submit</button>
+        </div>
+    </div>
+</form>
