@@ -2,3 +2,8 @@
     grid-area: header;
     background-color: lightblue;
 }
+header{
+    display: grid;
+    justify-items: center;
+    width: 100%;
+}

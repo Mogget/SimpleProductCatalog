@@ -23,6 +23,13 @@ namespace ProductCatalog.Controllers
             return _productList.Products;
         }
 
+        [HttpGet("{id}")]
+        public Product? GetById(int id)
+        {
+            _logger.LogInformation("Get product by Id");
+            return _productList.Products.FirstOrDefault(x => x.Id == id);
+        }
+
         [HttpPut]
         public IResult Put(Product product)
         {

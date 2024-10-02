@@ -1,1 +1,21 @@
-<p>product-list works!</p>
+<div>
+    <header class="table-row">
+        <div class="table-cell">CODE</div>
+        <div class="table-cell">NAME</div>
+        <div class="table-cell">PRICE</div>
+        <div class="table-cell">DESCRIPTION</div>
+        <div ></div>
+    </header>
+    @for(product of products(); track product.id) {
+        <div class="table-row">
+            <div class="table-cell">{{product.code}}</div>
+            <div class="table-cell">{{product.name}}</div>
+            <div class="table-cell">{{product.price}}</div>
+            <div class="table-cell">{{product.description}}</div>
+            <div class="table-cell">
+                <mat-icon aria-label="Edit product icon" [routerLink]="['/add', product.id]" fontIcon="edit" ></mat-icon>
+                <mat-icon aria-label="Remove product icon" fontIcon="delete" (click)="remove(product.id)"></mat-icon>
+            </div>
+        </div>
+    }
+</div>

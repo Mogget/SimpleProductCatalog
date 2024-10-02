@@ -39,6 +39,13 @@ export interface ProductServiceInterface {
     /**
      * 
      * 
+     * @param id 
+     */
+    apiProductIdGet(id: number, extraHttpRequestParams?: any): Observable<Product>;
+
+    /**
+     * 
+     * 
      * @param product 
      */
     apiProductPost(product?: Product, extraHttpRequestParams?: any): Observable<{}>;

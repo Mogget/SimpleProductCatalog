@@ -1,0 +1,22 @@
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 5px;
+}
+
+.table-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem;
+}
+header > .table-cell {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.table-cell mat-icon {
+    margin: 0 5px;
+}

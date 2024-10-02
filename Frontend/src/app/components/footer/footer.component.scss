@@ -2,3 +2,8 @@
     grid-area: footer;
     background-color: lightgreen;
 }
+
+footer {
+    display: grid;
+    justify-items: center;
+}

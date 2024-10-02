@@ -24,7 +24,7 @@
             }
 
             var editProduct = this.Products.FirstOrDefault(x => x.Id == product.Id);
-            if (editProduct != null)
+            if (editProduct == null)
             {
                 return Results.ValidationProblem(new Dictionary<string, string[]>() { { nameof(product), new string[] { "Product not exists" } } });
             }
